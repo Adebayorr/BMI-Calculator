@@ -10,6 +10,8 @@ const heightOption = document.querySelectorAll(".height-option")
 const result = document.querySelector('.result')
 const button = document.querySelector('button')
 
+
+
 console.log(height, weight, weightOption, heightOption)
 
 let weightInput;

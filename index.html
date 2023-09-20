@@ -4,37 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script defer src="index.js"></script>
 </head>
 <body>
-    <div>
-        <input type="text" placeholder="Enter your weight" class="weight">
-        <select name="" id="">
-            <option value="kg" class="weight-child">Kilogram(kg)</option>
-            <option value="lbs" class="weight-child">Pounds(lbs)</option>
-        </select>
-       
-    </div>
-    <div>
-        <input type="text" placeholder="Enter your height" class="height">
-        <select name="" id="">
-            <option value="feet" class="height-option">Feet</option>
-            <option value="meter" class="height-option">Meter</option>
-            <option value="inches" class="height-option">Inches</option>
-        </select>
-       
-    </div>
-    <button>Calculate My BMI</button>
-    <div class="ouput">
-        <div class="graph">
-            <div class="status 15"></div>
-            <div class="status 16"></div>
-            <div class="status 18.5"></div>
-            <div class="status 25"></div>
-            <div class="status 30"></div>
-            <div class="status 35"></div>
+    <div class="home-wrapper">
+        <div class="gender">
+            <div class="male">
+                <img src="./assets/male-avatar.png" alt="" class="avatar">
+            </div>
+            <div class="female">
+                <img src="./assets/female-avatar.png" alt="" class="avatar">
+            </div>
         </div>
-        <h3 class="result">Healthy Weight</h3>
+        <div class="height-wrapper">
+            <div class="height-data-wrapper">
+                <h3 class="height-title">Height</h3>
+                <p class="height-value"><span class="range-value">0</span>CM</p>
+            </div>
+            <div class="height-range-wrapper">
+                <input type="range" class="height-range" value="0" min="0" max="1000">
+            </div>
+        </div>
+        <div class="age-and-weight">
+            <div class="weight-wrapper">
+                <div class="weight-details">
+                    <h3 class="weight-title">Weight</h3>
+                    <p class="weight-value">45<span class="unit">Kg</span></p>
+                </div>
+                <div class="weight-btn">
+                    <div class="add">
+                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg width="80px" height="80px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 12H18M12 6V18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="minus">
+                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg width="80px" height="80px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 12L18 12" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="age">
+                <div class="age-details">
+                    <h3 class="age-title">age</h3>
+                    <p class="age-value">43</p>
+                </div>
+                <div class="age-btn">
+                    <div class="add">
+                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg width="80px" height="80px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 12H18M12 6V18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="minus">
+                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg width="80px" height="80px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 12L18 12" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+            </div>
+        </div>
+
     </div>
+    
+    <button>Calculate My BMI</button>
+    
 </body>
 </html>
