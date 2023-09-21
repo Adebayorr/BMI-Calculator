@@ -102,11 +102,10 @@ body {
 }
 
 .height-range {
-    all: unset;
     -webkit-appearance: none;
     background-color: #3f51b5;
     outline: none;
-    /* box-shadow: inset; */
+    box-shadow: inset; 
     border-radius: .6rem;
     overflow: hidden;
     width: 80%;
