@@ -5,34 +5,35 @@
 // BMI = weight/(height **2)
 
 const height = document.querySelector('.range-value')
-const age = document.querySelector('.age')
+const age = document.querySelector('.age-value')
 const range = document.querySelector('.height-range')
 const weight = document.querySelector('.weight-value')
 const addWeight = document.querySelector('.add')
 const minusWeight = document.querySelector('.minus')
+const addAge = document.querySelector('.add-age')
+const minusAge = document.querySelector('.minus-age')
 function updateHeight () {
         height.innerHTML = range.value
 }
 range.addEventListener('mousemove', updateHeight)
 console.log(weight.textContent)
 
-function increaseWeight () {
-    weight.innerHTML = Number(weight.innerHTML) + 1
-    console.log(weight.textContent)
-}
-function decreaseWeight () {
-    if (Number(weight.innerHTML) === 0) {
-        weight.innerHTML = 0
+function doMath (element, op) {
+    if (op === 'add') {
+        element.innerHTML = Number(element.innerHTML) + 1
     } else {
-        weight.innerHTML = Number(weight.innerHTML) - 1
-        console.log(weight.textContent)
+        if (Number(element.innerHTML) === 0) {
+            element.innerHTML = 0
+        } else {
+            element.innerHTML = Number(element.innerHTML) - 1
+        }
     }
-    
 }
 
-addWeight.addEventListener('click', increaseWeight)
-minusWeight.addEventListener('click', decreaseWeight)
-// console.log(height, weight, weightOption, heightOption)
+addWeight.addEventListener('click', () => doMath(weight, 'add'))
+minusWeight.addEventListener('click', () => doMath(weight, 'minus'))
+addAge.addEventListener('click', () => doMath(age, 'add'))
+minusAge.addEventListener('click', () => doMath(age, 'minus'))
 
 
 

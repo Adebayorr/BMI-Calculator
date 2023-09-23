@@ -162,12 +162,23 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.add {
+    order: 2;
+}
 .weight-btn svg, .age-btn svg{
     width: 25px;
     height: 25px;
 }
 
-
+button {
+    font-size: 1.2rem;
+    padding: .6rem 1.3rem;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    background-color: #536dfe;
+    border-radius: .4rem;
+    cursor: pointer;
+}
 
 
