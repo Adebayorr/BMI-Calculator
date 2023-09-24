@@ -12,6 +12,9 @@ const addWeight = document.querySelector('.add')
 const minusWeight = document.querySelector('.minus')
 const addAge = document.querySelector('.add-age')
 const minusAge = document.querySelector('.minus-age')
+const result = document.querySelector('.result')
+const button = document.querySelector('button')
+
 function updateHeight () {
         height.innerHTML = range.value
 }
@@ -35,18 +38,30 @@ minusWeight.addEventListener('click', () => doMath(weight, 'minus'))
 addAge.addEventListener('click', () => doMath(age, 'add'))
 minusAge.addEventListener('click', () => doMath(age, 'minus'))
 
+console.log(Number(height.textContent))
 
+function yourBMI (height, weight) {
+    // let meter = convertToMeter(heightData, heightmeasurement)
+    // let kg = convertToKg(weight, weightmeasurement)
 
-// function convertToKg (weightdata, measurement) {
-//     let weight = 0
-//     if (measurement === 'kg') {
-//         weight = weightdata
+console.log(weight, height)
+    const BMI = Math.floor((weight / ((height * height))) * 10000)
+    return BMI
+}
 
-//     } else if (measurement === 'lbs') {
-//         weight = weightdata /2.2
-//     } 
-//     return weight
-// }
+console.log(yourBMI(Number(height.textContent), Number(weight.textContent)))
+button.addEventListener('click', () => {
+    result.innerHTML = yourBMI(Number(height.textContent), Number(weight.textContent))
+})
+// // let meter = convertToMeter(10.8, 'feet')
+// // let kg = convertToKg(70, 'kg')
+// // const BMI = kg / (meter * meter)
+// // console.log(BMI)
+
+// button.addEventListener('click', () => {
+//     result.innerHTML = yourBMI(heightInput, weightInput, 'meter', 'kg')
+
+// })
 
 // function convertToMeter (heightData, heightmeasurement) {
 //     let height = 0
@@ -62,25 +77,3 @@ minusAge.addEventListener('click', () => doMath(age, 'minus'))
 
 // console.log(convertToMeter(heightInput, 'feet'))
 // console.log(convertToKg(weightInput, 'kg'))
-
-// function yourBMI (heightData, weightdata, heightmeasurement, weightmeasurement) {
-//     let meter = convertToMeter(heightData, heightmeasurement)
-//     let kg = convertToKg(weightdata, weightmeasurement)
-
-
-//     const BMI = kg / (meter * meter)
-//     return BMI
-// }
-
-// console.log(yourBMI(heightInput, weightInput, 'feet', 'kg'))
-
-// // let meter = convertToMeter(10.8, 'feet')
-// // let kg = convertToKg(70, 'kg')
-// // const BMI = kg / (meter * meter)
-// // console.log(BMI)
-
-// button.addEventListener('click', () => {
-//     result.innerHTML = yourBMI(heightInput, weightInput, 'meter', 'kg')
-
-// })
-

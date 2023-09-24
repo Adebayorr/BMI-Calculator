@@ -148,6 +148,11 @@ body {
     font-weight: bold;
     text-align: center;
 } 
+
+.weight-val {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
 .weight-title, .age-title {
     font-size: 1.2rem;
     font-weight: bold;
