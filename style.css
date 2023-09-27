@@ -17,7 +17,8 @@ body {
 }
 
 .home-wrapper {
-    width: 80vw;
+    width: calc(100% - 2rem);
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -89,9 +90,10 @@ body {
 .range-value {
     font-size: 3rem;
     font-weight: bold;
+    width: 20%;
 }
 
-.height-value {
+.height-val {
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -143,9 +145,29 @@ body {
 .unit {
     font-size: 1.1rem;
 }
-.weight-value, .age-value {
+
+.weight-input_wrapper, .age-input_wrapper, .height-input-wrapper {
+    display: flex;
+    overflow: hidden;
+}
+
+
+
+
+
+
+.weight-value, .age-value{
+    all: unset;
     font-size: 3rem;
     font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    background-color: red;
+    width: 100px;
     text-align: center;
 } 
 
@@ -157,6 +179,10 @@ body {
     font-size: 1.2rem;
     font-weight: bold;
 } 
+
+.weight-details {
+    width: 100%;
+}
 
 .add, .minus {
     background-color: #ffffff77;
@@ -175,6 +201,73 @@ body {
     height: 25px;
 }
 
+
+.age-and-weight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+    text-align: center;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+input::-webkit-outer-spin-button, 
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.weight-input_wrapper > input,
+.age-input_wrapper > input {
+    background-color: #ffffff00;
+    font-size: 2.5rem;
+    width: 70%;
+    text-align: center;
+}
+.age-btn, .weight-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add, .minus {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ffffff86;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+}
+
+.add svg, .minus svg {
+    width: 60%;
+    height: 60%;
+}
+
+
+
+.weight-input_wrapper, .age-input_wrapper {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: baseline;
+    margin: 0 auto;
+    
+}
+
+
+
+
+
 button {
     font-size: 1.2rem;
     padding: .6rem 1.3rem;
@@ -187,3 +280,17 @@ button {
 }
 
 
+div.height-input_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.range-value {
+    background-color: #ffffff00;
+    font-size: 2.5rem;
+    width: 40%;
+    text-align: center;
+}

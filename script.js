@@ -14,21 +14,23 @@ const addAge = document.querySelector('.add-age')
 const minusAge = document.querySelector('.minus-age')
 const result = document.querySelector('.result')
 const button = document.querySelector('button')
-
+console.log(weight.value)
 function updateHeight () {
-        height.innerHTML = range.value
+        height.value = range.value
 }
 range.addEventListener('mousemove', updateHeight)
 console.log(weight.textContent)
 
 function doMath (element, op) {
     if (op === 'add') {
-        element.innerHTML = Number(element.innerHTML) + 1
+        element.value = Number(element.value) + 1
+        console.log(element.value)
     } else {
-        if (Number(element.innerHTML) === 0) {
-            element.innerHTML = 0
+        if (Number(element.value) === 0) {
+            element.value = 0
         } else {
-            element.innerHTML = Number(element.innerHTML) - 1
+            element.value = Number(element.value) - 1
+            console.log(element)
         }
     }
 }
@@ -45,13 +47,14 @@ function yourBMI (height, weight) {
     // let kg = convertToKg(weight, weightmeasurement)
 
 console.log(weight, height)
+    console.log(weight.value, height.value)
     const BMI = Math.floor((weight / ((height * height))) * 10000)
     return BMI
 }
 
-console.log(yourBMI(Number(height.textContent), Number(weight.textContent)))
+console.log(yourBMI(Number(height.value), Number(weight.value)))
 button.addEventListener('click', () => {
-    result.innerHTML = yourBMI(Number(height.textContent), Number(weight.textContent))
+    result.innerHTML = yourBMI(Number(height.value), Number(weight.value))
 })
 // // let meter = convertToMeter(10.8, 'feet')
 // // let kg = convertToKg(70, 'kg')
