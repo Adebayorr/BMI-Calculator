@@ -13,8 +13,8 @@ const minusWeight = document.querySelector('.minus')
 const addAge = document.querySelector('.add-age')
 const minusAge = document.querySelector('.minus-age')
 const result = document.querySelector('.result')
-const button = document.querySelector('button')
-console.log(weight.value)
+const button = document.querySelector('.result-btn')
+console.log(result)
 function updateHeight () {
         height.value = range.value
 }
@@ -54,8 +54,14 @@ console.log(weight, height)
 
 console.log(yourBMI(Number(height.value), Number(weight.value)))
 button.addEventListener('click', () => {
-    result.innerHTML = yourBMI(Number(height.value), Number(weight.value))
+    const BMI = yourBMI(Number(height.value), Number(weight.value))
+    console.log(BMI)
+    localStorage.setItem('result', BMI)
 })
+
+result.innerHTML = localStorage.getItem(result)
+
+
 // // let meter = convertToMeter(10.8, 'feet')
 // // let kg = convertToKg(70, 'kg')
 // // const BMI = kg / (meter * meter)

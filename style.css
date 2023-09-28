@@ -268,7 +268,7 @@ input[type=number] {
 
 
 
-button {
+.result-btn {
     font-size: 1.2rem;
     padding: .6rem 1.3rem;
     outline: none;
@@ -277,6 +277,7 @@ button {
     background-color: #536dfe;
     border-radius: .4rem;
     cursor: pointer;
+    text-decoration: none;
 }
 
 
