@@ -1,9 +1,3 @@
-// pounds = 1k/2.2
-// 1 ft = 12 inches
-// 1 meter = 39.37 inches
-// 1 meter = 3.28 ft
-// BMI = weight/(height **2)
-
 const height = document.querySelector('.range-value')
 const age = document.querySelector('.age-value')
 const range = document.querySelector('.height-range')
@@ -12,13 +6,13 @@ const addWeight = document.querySelector('.add')
 const minusWeight = document.querySelector('.minus')
 const addAge = document.querySelector('.add-age')
 const minusAge = document.querySelector('.minus-age')
-const result = document.querySelector('.result')
 const button = document.querySelector('.result-btn')
-console.log(result)
+
 function updateHeight () {
         height.value = range.value
+        console.log(height.value)
 }
-range.addEventListener('mousemove', updateHeight)
+range.addEventListener('input', updateHeight)
 console.log(weight.textContent)
 
 function doMath (element, op) {
@@ -40,38 +34,16 @@ minusWeight.addEventListener('click', () => doMath(weight, 'minus'))
 addAge.addEventListener('click', () => doMath(age, 'add'))
 minusAge.addEventListener('click', () => doMath(age, 'minus'))
 
-console.log(Number(height.textContent))
 
 function yourBMI (height, weight) {
-    // let meter = convertToMeter(heightData, heightmeasurement)
-    // let kg = convertToKg(weight, weightmeasurement)
-
-console.log(weight, height)
-    console.log(weight.value, height.value)
     const BMI = Math.floor((weight / ((height * height))) * 10000)
     return BMI
 }
 
-console.log(yourBMI(Number(height.value), Number(weight.value)))
 button.addEventListener('click', () => {
     const BMI = yourBMI(Number(height.value), Number(weight.value))
-    console.log(BMI)
     localStorage.setItem('result', BMI)
 })
-
-result.innerHTML = localStorage.getItem(result)
-
-
-// // let meter = convertToMeter(10.8, 'feet')
-// // let kg = convertToKg(70, 'kg')
-// // const BMI = kg / (meter * meter)
-// // console.log(BMI)
-
-// button.addEventListener('click', () => {
-//     result.innerHTML = yourBMI(heightInput, weightInput, 'meter', 'kg')
-
-// })
-
 // function convertToMeter (heightData, heightmeasurement) {
 //     let height = 0
 //     if (heightmeasurement === 'meter')  {
